@@ -3,8 +3,9 @@
 \item Importance of quantification of MRI in understanding brain-behavior relationships and disease
 \item Large diversity of people, their brains, both normally and from disease, means we need to collect large datasets = "big data"
 \item To comprehend all the data we collect, we reduce 3D or 4D images that are rich with information to 1D scalar "features", such as "brain size" with automated algorithms
-\item But automated algorithms don't have the rich visual system of humans, they make mistakes, especially for brains with pathology or early in development
+\item But automated algorithms don't have the rich visual system of humans, they make errors, especially for brains with pathology or early in development
 \item Data science can help with biomedical/clinical research by transforming a research question into a crowd-sourced solution. 
+\item Crowd sourcing has been successful in other disciplines, such as ...
 \item I propose an open platform that can be adapted to different use cases around the following core concepts/specific aims.
 \end{itemize}
 
@@ -13,19 +14,23 @@
 \item Scaleablity and Security: A database system and server backend that keeps data private by piece-wise exposure
 \item Learning by Example: Machine learning tool that learns from human curation
 \item Training and Gamification: User interface that trains users to solve a specific problem to solve, and keeps them engaged to keep solving
+
+The system I propose can be generalized to many use cases, including MS lesion segmentation, but for this proposal, these aims will be applied to a specific use case, which is brain extraction. Brain extraction is important because brain volume is an important feature to study in human development and aging, but also in diseases like MS, and in genotype-phenotype studies, where precision is important due to small effect sizes. Brain extraction is difficult for a computer alone the intensity of the dura looks similar to that of gray matter, and often require manual editing, as described in the Freesurfer package. The data used in this proposal will be open-source data, but the platform can accommodate private data as well, due to aim 1. 
+
 \end{enumerate}
 
 \section{Specific Aim 1: Scaleablility and Security}
 
 We will address 2 key challenges:
 \begin{itemize}
-\item data management, handling large datasets, distributed computing. 
+\item data management, handling large datasets, distributed computing 
 \begin{itemize}
 \item need to learn how to use Amazon, spark, distributed computing
+\item learn how to connect to amazon turk for paid incentive, zooniverse for free
 \end{itemize}
 \item serving piece-wise "chunks" of data rather than the whole dataset. This preserves privacy if the data is not open, and reduces the fatigue of users. Need to serve intelligently to figure out which pieces to serve next.
 \begin{itemize}
-\item different datasets will need to be chunked differently. Lesions need all 3 slices view but brain mask editing, only 1.
+\item different datasets will need to be chunked differently. Lesions need all 3 slices view but brain mask editing, only 1. Needs to be user-specified, to answer the question "how much chunking is necessary for this application"
 \end{itemize}
 \end{itemize}
 
@@ -33,11 +38,12 @@ We will address 2 key challenges:
 
 Address 2 challenges:
 \begin{itemize}
-\item resolving user input to create a final image
+\item resolving user input to create a final image, based on training data
 \item predicting regions of variability to serve more efficiently
 \end{itemize}
 
 \section{Specific Aim 3: Training and Gamification}
 \begin{itemize}
-\item 
+\item training: how frequently does training data need to be used
+\item UI edit, gamify
 \end{itemize}
