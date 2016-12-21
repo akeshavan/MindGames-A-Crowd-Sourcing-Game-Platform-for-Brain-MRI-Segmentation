@@ -10,7 +10,34 @@
 
 \section{Specific Aims}
 \begin{enumerate}
-\item Scaleablity and Security: A database system and data privacy by piece-wise exposure
+\item Scaleablity and Security: A database system and server backend that keeps data private by piece-wise exposure
 \item Learning by Example: Machine learning tool that learns from human curation
 \item Training and Gamification: User interface that trains users to solve a specific problem to solve, and keeps them engaged to keep solving
 \end{enumerate}
+
+\section{Specific Aim 1: Scaleablility and Security}
+
+We will address 2 key challenges:
+\begin{itemize}
+\item data management, handling large datasets, distributed computing. 
+\begin{itemize}
+\item need to learn how to use Amazon, spark, distributed computing
+\end{itemize}
+\item serving piece-wise "chunks" of data rather than the whole dataset. This preserves privacy if the data is not open, and reduces the fatigue of users. Need to serve intelligently to figure out which pieces to serve next.
+\begin{itemize}
+\item different datasets will need to be chunked differently. Lesions need all 3 slices view but brain mask editing, only 1.
+\end{itemize}
+\end{itemize}
+
+\section{Specific Aim 2: Learning by Example}
+
+Address 2 challenges:
+\begin{itemize}
+\item resolving user input to create a final image
+\item predicting regions of variability to serve more efficiently
+\end{itemize}
+
+\section{Specific Aim 3: Training and Gamification}
+\begin{itemize}
+\item 
+\end{itemize}
