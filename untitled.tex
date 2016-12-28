@@ -14,7 +14,7 @@
 
 \section{Specific Aims}
 \begin{enumerate}
-\item Scaleablity and Security: A database system and server backend that keeps data private by piece-wise exposure
+\item Scaleablity and Security: A scaleable database system and server backend that keeps data private by piece-wise exposure
 \item Learning by Example: Machine learning tool that learns from human curation
 \item Training and Gamification: User interface that trains users to solve a specific problem to solve, and keeps them engaged to keep solving
 \\
@@ -24,12 +24,12 @@ The system I propose can be generalized to many use cases, including MS lesion s
 \end{enumerate}
 
 \section{Specific Aim 1: Scaleablility and Security}
-
+EyeWire game had over 200,000 users, so our solution needs to scale well. 
 We will address 2 key challenges:
 \begin{itemize}
 \item data management, handling large datasets, distributed computing 
 \begin{itemize}
-\item need to learn how to use Amazon, spark, distributed computing
+\item need to learn how to use Amazon, spark, distributed computing. Resources at the eScience institute will help. 
 \item learn how to connect to amazon turk for paid incentive, zooniverse for free
 \end{itemize}
 \item serving piece-wise "chunks" of data rather than the whole dataset. This preserves privacy if the data is not open, and reduces the fatigue of users. Need to serve intelligently to figure out which pieces to serve next.
